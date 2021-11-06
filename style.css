@@ -13,10 +13,27 @@
   transform: scale(1.2);
 }
 
+/*
+First, I am not sure why it worked, because according to https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
+you can only have the syntax of
+@supports not selector(:focus-visible) {...}    <<< you always have to have the not in there....
+ */
 @supports selector(:focus-visible) {
   .btn:focus {
     transform: scale(1);
   }
+
+  /*
+  This line is for when you have clicks on to the button, e.g. button 3, it will following the above line, basically:
+   .btn:hover,
+   .btn:focus {
+     transform: scale(1.2);
+   }
+   .btn:focus {
+    transform: scale(1);
+   }
+   Which resulting btn:hover {transform: scale(1)} when btn is in hover + focus state. In order to trigger the hover scale bigger style, you will need to reinstate it in the following:
+   */
   .btn:hover {
     transform: scale(1.2);
   }
