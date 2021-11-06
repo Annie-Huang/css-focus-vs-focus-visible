@@ -1,0 +1,7 @@
+Use this instead of :focus (most of the time)
+(https://www.youtube.com/watch?v=j68WvpUX41c)
+
+https://codepen.io/kevinpowell/pen/oNeYaOK
+https://github.com/Annie-Huang/css-focus-vs-focus-visible
+
+==================================================================
